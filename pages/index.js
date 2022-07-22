@@ -26,7 +26,9 @@ export default function Home({services, projects}) {
 }
 
 
-export async function getStaticProps() {
+// export async function getStaticProps() { 7. Cambiado por getServerSideProps
+// export async function getServerSideProps() {
+export async function getStaticProps() { // 8. Vuelve a ser estático... -.-
   // const resp = await fetch("http://localhost:4050/services") 5. Haciendo prueba
   const resp = await fetch("http://edsoft.vercel.app/api/services")
   const services = await resp.json()
